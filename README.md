@@ -1,7 +1,7 @@
 # PHP-native-image-compressor
 A simple way to compress images on your server. Made in pure php. Does not require dependencies.
 
-Example of how to use:
+# Example of how to use:
 
 include_once "lib/image-compressor.class.php";
 
