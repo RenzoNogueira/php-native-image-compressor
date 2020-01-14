@@ -11,3 +11,19 @@ include_once "lib/image-compressor.php";
 $compressedImage = CompressImage::compress("image.jpeg", 200, 200, 75, 'jpeg')
 ?>
 ```
+
+## Parameters
+- **$maxHeight** Maximum height of the image.
+- **$quality** Percent of the quality relative to the original image. The default is 50.
+- **$type** Output type (jpeg, png, gif). The default is 'jpeg'.
+
+## Return
+Returns an Array containing base64 and binary image data.
+```
+$compressedImage = CompressImage::compress("image.jpeg", 200, 200, 75, 'jpeg')
+echo $compressedImag['binary']; // Base64 binary text
+echo $compressedImag['base64']; // Binary text
+
+// Writing a new image to a file
+ file_put_contents('new_image_compress.jpeg', $compressedImag['binary']);
+```
