@@ -3,7 +3,7 @@ A simple way to compress images on your server. Made in pure php. Does not requi
 
 # Example of how to use:
 
-include_once "lib/image-compressor.class.php";
+include_once "lib/image-compressor.php";
 
 // Array with base64 and binary image
 
