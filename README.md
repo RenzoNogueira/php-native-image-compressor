@@ -21,6 +21,7 @@ $compressedImage = CompressImage::compress("image.jpeg", 200, 200, 75, 'jpeg')
 Returns an Array containing base64 and binary image data.
 ```
 $compressedImage = CompressImage::compress("image.jpeg", 200, 200, null, 'jpeg');
+
 echo $compressedImag['binary']; // Base64 binary text
 echo $compressedImag['base64']; // Binary text
 
