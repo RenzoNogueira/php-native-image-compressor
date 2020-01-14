@@ -12,6 +12,8 @@ $compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_im
 ?>
 ```
 
+The lower the resolution, the higher the compression ratio.
+
 ## Parameters
 - **$fileSource** Path, URL, or base64 of the image.
 - **$fileDestination** File Destination Folder. Set to null to use default.
