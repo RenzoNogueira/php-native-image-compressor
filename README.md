@@ -14,7 +14,7 @@ $compressedImage = CompressImage::compress("image.jpeg", 200, 200, 75, 'jpeg')
 
 ## Parameters
 - **$maxHeight** Maximum height of the image.
-- **$quality** Percent of the quality relative to the original image. The default is 50. Set null to default
+- **$quality** Percent of the quality relative to the original image. The default is 50. Set null to default.
 - **$type** Output type (jpeg, png, gif). The default is 'jpeg'.
 
 ## Return
