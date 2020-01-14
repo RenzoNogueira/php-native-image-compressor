@@ -41,15 +41,15 @@ class CompressImage
         // RENDERING
         switch ($type) {                                                                // Creates image file based on the specified type.
             case 'png':
-                imagepng($image_p, 'image_data.png', $quality <= 100 ? $quality : 50);
+                imagepng($image_p, 'image_data_compress.png', $quality <= 100 ? $quality : 50);
                 break;
             case 'gif':
-                imagegif($image_p, 'image_data.gif', $quality <= 100 ? $quality : 50);
+                imagegif($image_p, 'image_data_compress.gif', $quality <= 100 ? $quality : 50);
                 break;
             default:
-                imagegif($image_p, 'image_data.jpeg', $quality <= 100 ? $quality : 50);
+                imagegif($image_p, 'image_data_compress.jpeg', $quality <= 100 ? $quality : 50);
         }
-        $path = 'image_data.' . $type;
+        $path = 'image_data_compress.' . $type;
         $type = pathinfo($path, PATHINFO_EXTENSION);                                    // Image info.
         $data = file_get_contents($path);                                               // Binary handle of the generated image
         $binary = $data;                                                                // Binary text to use for writing file.
