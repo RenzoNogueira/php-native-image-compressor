@@ -22,6 +22,7 @@ class CompressImage
      * @param $maxHeight Maximum height of the image.
      * @param $quality Percent of the quality relative to the original image. The default is 50.
      * @param $type Output type (jpeg, png, gif). The default is 'jpeg'.
+     * @return Array Base64 and binary image data 
      */
     public static function compress($fileName, $maxWidth, $maxHeight, $quality, $type)
     {
