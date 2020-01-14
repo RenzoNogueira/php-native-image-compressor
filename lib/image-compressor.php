@@ -36,7 +36,12 @@ class CompressImage
         }
         // RESIZED
         $image_p = imagecreatetruecolor($maxWidth, $maxHeight);
-        $image = imagecreatefromjpeg($fileName);
+        
+        // CREATING AND FORMATTING THE IMAGE
+        if ($image = @imagecreatefromjpeg($fileName)) {
+        } else if ($image = @imagecreatefrompng($fileName)) {
+        } else if ($image = @imagecreatefromgif($fileName));
+        
         imagecopyresampled($image_p, $image, 0, 0, 0, 0, $maxWidth, $maxHeight, $width_orig, $height_orig);
         // RENDERING
         switch ($type) {                                                                // Creates image file based on the specified type.
