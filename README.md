@@ -26,5 +26,5 @@ echo $compressedImag['binary']; // Base64 binary text
 echo $compressedImag['base64']; // Binary text
 
 // Writing a new image to a file
- file_put_contents('new_image_compress.jpeg', $compressedImag['binary']);
+file_put_contents('new_image_compress.jpeg', $compressedImag['binary']);
 ```
