@@ -1,4 +1,4 @@
-# PHP-native-image-compressor
+# php-native-image-compressor
 A simple way to compress images on your server and save space. Made in pure php. Does not require dependencies.
 
 ## Example of how to use:
