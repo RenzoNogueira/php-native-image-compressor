@@ -4,7 +4,7 @@
  * CompressImage
  * 
  * @author Renzo Nogueira
- * @since 2.0 Added new features.
+ * @since 1.1 Added new features.
  * 
  * Compresses images while maintaining a good resolution.
  */
@@ -18,7 +18,7 @@ class CompressImage
      * compress
      * 
      * @author Renzo Nogueira.
-     * @since 2.0 Destination and name added.
+     * @since 1.1 Destination and name added.
      * @param $fileSource Path, URL, or base64 of the image.
      * @param $fileDestination File Destination Folder. Set to null to use default.
      * @param $fileName File name. Set to null to use default.
