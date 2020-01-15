@@ -11,6 +11,9 @@
 class CompressImage
 {
 
+    private static $binary = null;            // BINARY TEXT TO USE FOR WRITING FILE.
+    private static $base64 = null;            // CODE FOR BASE64 TO SEND.
+
     /**
      * compress
      * 
@@ -42,9 +45,16 @@ class CompressImage
         $image_p = imagecreatetruecolor($maxWidth, $maxHeight);
 
         // CREATING AND FORMATTING THE IMAGE.
-        if ($image = @imagecreatefromjpeg($fileSource)) {
-        } else if ($image = @imagecreatefrompng($fileSource)) {
-        } else if ($image = @imagecreatefromgif($fileSource));
+        if ($image = @imagecreatefromjpeg($fileSource)) {           // JPEG
+        } else if ($image = @imagecreatefrompng($fileSource)) {     // PNG
+        } else if ($image = @imagecreatefromgif($fileSource)) {     // GIF
+        } else {                                                    // IF THE FILE IS NOT RECOGNIZED
+            $mensage = 'Error: Unrecognized File Format. Use files with extension jpg, jpeg, png or gif.';
+            return array(
+                'binary' =>  $mensage,
+                'base64' =>  $mensage,
+            );
+        }
 
         // COPYING AND RESIZING THE IMAGE
         imagecopyresampled($image_p, $image, 0, 0, 0, 0, $maxWidth, $maxHeight, $width_orig, $height_orig);
@@ -56,26 +66,27 @@ class CompressImage
         $fileName = !is_null($fileName) ? $fileName : 'image_data_compress';
 
         // RENDERING
-        switch ($type) {                                                                // Creates image file based on the specified type.
+        switch ($type) {                                                                // CREATES IMAGE FILE BASED ON THE SPECIFIED TYPE.
             case 'png':
-                imagepng($image_p, $fileDestination . $fileName . '.png', $quality <= 100 ? $quality : 50);
+                imagepng($image_p, $fileDestination . $fileName . '.png', $quality <= 100 ? $quality : 50);         // PNG
                 break;
             case 'gif':
-                imagegif($image_p, $fileDestination . $fileName . '.gif', $quality <= 100 ? $quality : 50);
+                imagegif($image_p, $fileDestination . $fileName . '.gif', $quality <= 100 ? $quality : 50);         // GIF
                 break;
             default:
-                imagegif($image_p, $fileDestination . $fileName . '.jpeg', $quality <= 100 ? $quality : 50);
+                imagegif($image_p, $fileDestination . $fileName . '.jpeg', $quality <= 100 ? $quality : 50);        // DEFAULT JPEG
         }
 
         $path = $fileDestination . $fileName . '.' . $type;
-        $type = pathinfo($path, PATHINFO_EXTENSION);                                    // Image info.
-        $data = file_get_contents($path);                                               // Binary handle of the generated image
-        $binary = $data;                                                                // Binary text to use for writing file.
-        $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);            // Code for base64 to send.
+        $type = pathinfo($path, PATHINFO_EXTENSION);                                          // IMAGE INFO.
+        $data = file_get_contents($path);                                                     // BINARY HANDLE OF THE GENERATED IMAGE
+        self::$binary = $data;                                                                // BINARY TEXT TO USE FOR WRITING FILE.
+        self::$base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);            // CODE FOR BASE64 TO SEND.
 
+        // OPTIMIZED IMAGE
         return array(
-            'binary' => $binary,
-            'base64' => $base64
+            'binary' =>  self::$binary,
+            'base64' =>  self::$base64
         );
     }
 }
