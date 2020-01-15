@@ -16,6 +16,7 @@ The lower the resolution, the higher the compression ratio.
 
 ## Before
 <img width="300px" height="300px" src=”img/image.jpg”>
+
 ## After
 <img width="300px" height="300px" src=”compress/new_image.jpeg”>
 
