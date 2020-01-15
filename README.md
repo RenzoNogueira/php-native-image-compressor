@@ -29,7 +29,7 @@ $compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_im
 - **$fileName** File name. Set to null to use default.
 - **$maxWidth** Maximum width of the image.
 - **$maxHeight** Maximum height of the image.
-- **$quality** Percent of the quality relative to the original image. The default is 50. Set null to default.
+- **$quality** Percent of the quality relative to the original image. The default is 50. Set to null to use default.
 - **$type** Output type (jpeg, png, gif). The default is 'jpeg'. See if the original file is compatible.
 
 ## Return
