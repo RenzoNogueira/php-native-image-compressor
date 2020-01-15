@@ -21,7 +21,7 @@ $compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_im
 524 KB (537.228 bytes)
 <br><br>
 
-**The lower the resolution(width and height), the higher the optimization ratio.**
+**The lower the resolution (width and height), the higher the image optimization rate.**
 
 ## Parameters
 - **$fileSource** Path, URL, or base64 of the image.
