@@ -19,7 +19,7 @@ $compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_im
 ## After
 <img width="300px" height="300px" src="compress/new_image.jpeg">
 26,9 KB (27.566 bytes)
-<br>
+<br><br>
 
 **The lower the resolution, the higher the compression ratio.**
 
