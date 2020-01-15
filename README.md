@@ -8,7 +8,7 @@ A simple way to compress images on your server and save space. Made in pure php.
 include_once "lib/image-compressor.php";
 
 // Array with base64 and binary image
-$compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_image', 200, 200, 75, 'jpeg');
+$compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_image', 1000, 1000, 75, 'jpeg');
 ?>
 ```
 
@@ -35,7 +35,7 @@ $compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_im
 ## Return
 Returns an Array containing base64 and binary image data.
 ```
-$compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_image', 200, 200, 75, 'jpeg');
+$compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_image', 1000, 1000, 75, 'jpeg');
 
 echo $compressedImag['binary']; // Base64 binary text
 echo $compressedImag['base64']; // Binary text
