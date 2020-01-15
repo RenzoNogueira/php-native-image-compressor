@@ -15,9 +15,9 @@ $compressedImage = CompressImage::compress("img/image.jpg", 'compress/', 'new_im
 The lower the resolution, the higher the compression ratio.
 
 ## Before
-![Before](img/image.jpg)
+<img width="300px" height="300px" src=”img/image.jpg”>
 ## After
-![Before](compress/new_image.jpg)
+<img width="300px" height="300px" src=”compress/new_image.jpeg”>
 
 ## Parameters
 - **$fileSource** Path, URL, or base64 of the image.
