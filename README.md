@@ -16,9 +16,11 @@ The lower the resolution, the higher the compression ratio.
 
 ## Before
 <img width="300px" height="300px" src="img/image.jpg">
+672 KB (688.617 bytes)
 
 ## After
 <img width="300px" height="300px" src="compress/new_image.jpeg">
+26,9 KB (27.566 bytes)
 
 ## Parameters
 - **$fileSource** Path, URL, or base64 of the image.
