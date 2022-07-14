@@ -43,3 +43,7 @@ echo $compressedImag['base64']; // Binary text
 // Writing a new image to a file
 file_put_contents('new_image_compress.jpeg', $compressedImag['binary']);
 ```
+<br><br><br>
+<a href="https://rz.dev.br/" target="_blank">
+  <img src="https://rz.dev.br/assets/img/logo/Standard%20Logo%20Files/Original%20on%20Transparent.png" alt="rz.dev.br" width="400px">
+</a>
